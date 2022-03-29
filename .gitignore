@@ -1,0 +1,18 @@
+# build output
+.next/
+build/
+
+# dotenv environment variables
+.env
+.env.build
+
+# Dependency directories
+node_modules/
+
+# Lock
+yarn.lock
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

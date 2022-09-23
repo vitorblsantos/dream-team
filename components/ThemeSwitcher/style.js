@@ -17,6 +17,7 @@ export const Container = styled.div`
   cursor: pointer;
   display: flex;
   flex-wrap: nowrap;
+  margin: 0 0 0 auto;
   user-select: none;
 `
 

@@ -1,39 +1,25 @@
 import styled from 'styled-components'
 
-export const Anchor = styled.a`
-  color: inherit;
-  text-decoration: none;
-`
-
 export const Item = styled.li`
-  align-items: center;
-  color: #FFFDFD;
-  display: flex;
-  font-size: 1rem;
-  font-weight: 500;
-  height: 100%;
-  justify-content: center;
-  position: relative;
-  width: 140px;
+  color: ${({ fixed }) => fixed ? '#fff' : 'hsla(0, 0%, 100%, .48);'};
+  cursor: pointer;
+  padding: 4px;
+  transition: all .3s ease-in-out;
 
-  &:after {
-    background: ${({ Color }) => Color};
-    bottom: 0;
-    content: '';
-    height: 4px;
-    position: absolute;
-    width: 100%;
+  &:hover {
+    color: #fff;
   }
 `
 
 export const List = styled.ul`
-  display: flex;
-  flex-wrap: nowrap;
-  height: 100%;
+  background: ${({ fixed }) => fixed ? '#454895' : 'rgba(255, 255, 255, .05)'};
+  border-radius: 20px;
+  display: inline-flex;
   list-style: none;
-`
+  transition: all .3s ease-in-out;
+  padding: 12px;
 
-export const Nav = styled.nav`
-  height: 100%;
-  margin: 0 auto;
+  @media (max-width: 992px) {
+    display: none;
+  }
 `

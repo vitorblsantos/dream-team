@@ -8,7 +8,7 @@ class OddDocument extends Document {
         <Head>
           <link href="https://fonts.googleapis.com" rel="preconnect" />
           <link crossOrigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect" />
-          <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
         </Head>
         <body>
           <Main />

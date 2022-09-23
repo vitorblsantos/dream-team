@@ -1,8 +1,5 @@
 module.exports = {
   i18n: false,
-  amp: {
-    canonicalBase: ''
-  },
   analyticsId: process.env.VERCEL_ANALYTICS_ID || '',
   compress: true,
   devIndicators: {

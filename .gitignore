@@ -10,7 +10,7 @@ build/
 node_modules/
 
 # Lock
-yarn.lock
+package-lock.json
 
 # Logs
 npm-debug.log*

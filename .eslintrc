@@ -87,7 +87,7 @@
       }
     },
     "react": {
-      "version": "latest"
+      "version": "detect"
     }
   }
 }

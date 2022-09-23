@@ -1,66 +1,27 @@
 import React from 'react'
-import Link from 'next/link'
+import { bool } from 'prop-types'
 
-import { Anchor, Item, List, Nav } from './style'
+import { Item, List } from './style'
 
-const arr = [
-  {
-    color: '#EDBE19',
-    content: 'Editoria 1',
-    link: '#'
-  }, {
-    color: '#56258F',
-    content: 'Editoria 2',
-    link: '#'
-  }, {
-    color: '#A7264A',
-    content: 'Editoria 3',
-    link: '#'
-  }, {
-    color: '#3467C7',
-    content: 'Editoria 4',
-    link: '#'
-  }, {
-    color: '#4EB150',
-    content: 'Editoria 5',
-    link: '#'
-  }, {
-    color: '#D62A33',
-    content: 'Editoria 6',
-    link: '#'
-  }, {
-    color: '#696969',
-    content: 'Editoria 7',
-    link: '#'
-  }, {
-    color: '#E44E38',
-    content: 'Editoria 8',
-    link: '#'
-  }, {
-    color: '#C42EA8',
-    content: 'Editoria 9',
-    link: '#'
+const Menu = ({ fixed }) => {
+  const scrollTo = (ref) => {
+    ref = document.querySelector(ref)
+    const y = ref.getBoundingClientRect().top + window.pageYOffset - 100
+    window.scrollTo({ top: y, behavior: 'smooth' })
   }
-]
 
-const Menu = () => {
   return (
-    <Nav>
-      <List>
-        {
-          arr.map(({ color, content, link }, i) => (
-            <Item Color={color} key={i}>
-              <Link href={link} passHref>
-                <Anchor>
-                  {content}
-                </Anchor>
-              </Link>
-            </Item>
-          ))
-        }
-      </List>
-    </Nav>
+    <List {...{ fixed }}>
+      <Item {...{ fixed }} onClick={() => scrollTo('#problem')}>Problem</Item>
+      <Item {...{ fixed }} onClick={() => scrollTo('#solution')}>Our Solution</Item>
+      <Item {...{ fixed }} onClick={() => scrollTo('#product')}>Product</Item>
+      <Item {...{ fixed }} onClick={() => scrollTo('#tech')} >Technologies</Item>
+    </List>
   )
+}
+
+Menu.propTypes = {
+  fixed: bool
 }
 
 export default Menu

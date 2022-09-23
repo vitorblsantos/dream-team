@@ -10,8 +10,8 @@ const App = ({ Component, pageProps }) => {
   return (
     <Provider {...{ store }}>
       <Head>
-        <title>Vitorblsantos - template portal</title>
-        <meta content="A sua fonte segura de informação, SBT 40 anos, Brasil, Coronavirus, Congresso, Governo, Economia, Justica, Mundo, Esportes, Eleicoes, SBT Mulher, Analise, Podcast, Tudo Sobre, Videos, Redacao, Noticia" name="description" />
+        <title>Dream Team - Ford Network</title>
+        <meta content="Dream Team Ford Network" name="description" />
         <link href="/favicon.png" rel="shortcut icon" />
       </Head>
       <Component {...pageProps} />

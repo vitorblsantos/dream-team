@@ -1,18 +1,17 @@
 import React from 'react'
+import { bool } from 'prop-types'
+
 import Image from 'next/image'
 import Link from 'next/link'
-import { string } from 'prop-types'
-
-import LogoImage from '../../images/logo.png'
 
 import { Container } from './style'
 
-const Logo = ({ Height, MarginDesktop, Width }) => {
+const Logo = ({ fixed }) => {
   return (
-    <Container {... { Height, MarginDesktop, Width }}>
+    <Container {...{ fixed }}>
       <Link href="/">
         <a>
-          <Image alt="Logo SBT News" height={Height} src={LogoImage} width={Width} />
+          <Image alt="Logo Ford" height="40" src="/logo-ford.png" width="80" />
         </a>
       </Link>
     </Container>
@@ -20,9 +19,7 @@ const Logo = ({ Height, MarginDesktop, Width }) => {
 }
 
 Logo.propTypes = {
-  Height: string,
-  MarginDesktop: string,
-  Width: string
+  fixed: bool
 }
 
 export default Logo
